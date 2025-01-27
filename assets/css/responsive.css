@@ -49,9 +49,6 @@
 }/*max-width:991px*/
 
 @media screen and (max-width:768px){
- .header-text{
-  padding-top:50px;
-}
 	#about{
 		padding: 50px 0;
 	}
@@ -92,7 +89,7 @@
 		padding-bottom: 20px;
 	}
 	.header-text h2{
-		margin-top: 285px;
+		margin-top: 285px !important;
 	}
     nav.navbar.bootsnav .navbar-toggle {display: inline-block; float: right;margin-right: 0;margin-top: 7px;}
 }/*max-width:768px*/
