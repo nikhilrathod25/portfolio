@@ -26,6 +26,25 @@ font-family: 'Poppins', sans-serif;
 		1.General css (Reset code)
 --------------------------------------*/
  /* annimation css start */
+ 
+ .cool-link {
+    display: inline-block;
+    color: #8a3ffc;
+    text-decoration: none;
+}
+
+.cool-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #d92cf9;
+    transition: width .3s;
+}
+
+.cool-link:hover::after {
+    width: 100%;
+}
    /* Keyframes for animations */
 @keyframes fadeInDown {
     0% {
