@@ -26,7 +26,27 @@ font-family: 'Poppins', sans-serif;
 		1.General css (Reset code)
 --------------------------------------*/
  /* annimation css start */
- 
+ .animated-text {
+    text-decoration: none;
+    color: #000; /* Default color */
+    display: inline-block;
+    animation: colorFade 5s infinite; /* Infinite animation for Nikhil */
+  }
+  
+  @keyframes colorFade {
+    0%, 100% {
+      color: #d92cf9; /* Default black */
+    }
+    25% {
+      color: #da2cf977; /* Orange */
+    }
+    50% {
+      color: #da2cf95d; /* Blue */
+    }
+    75% {
+      color: #d92cf9; /* Green */
+    }
+  }
  .cool-link {
     display: inline-block;
     color: #8a3ffc;
