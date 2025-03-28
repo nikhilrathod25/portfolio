@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <!-- The above 3 meta tags must come first in the head; any other head content must come after these tags -->
 
         <!--font-family-->
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&amp;subset=devanagari,latin-ext" rel="stylesheet">
@@ -49,6 +49,50 @@
 			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
+        
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+        <style>
+            #customDiv {
+            / position: relative; /
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            overflow: hidden;
+            border-radius: 10px;
+            background: #1d1d1d;
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+        }
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            top: 0;
+            left: 0;
+        }
+        #content h1{
+            font-size: 32px !important;
+            color: white;
+        }
+        #changingText {
+            display: inline-block;
+            transition: opacity 0.5s ease-in-out;
+        }
+        #welcome-hero{
+            font-family: Arial, sans-serif;
+            background: #1d1d1d;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        </style>
 
     </head>
 	
@@ -79,7 +123,7 @@
 			            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
 			                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
 			                    <li class=" smooth-menu active"></li>
-					    <li class="smooth-menu"><a href="#about" class="cool-link custom-about">about</a></li>			                    
+							    <li class="smooth-menu"><a href="#about" class="cool-link custom-about">about</a></li>			                    
  			                    <li class=" smooth-menu"><a href="#education" class="cool-link custom-education">education</a></li>
 			                    <li class="smooth-menu"><a href="#skills" class="cool-link custom-skills">skills</a></li>
 			                    <li class="smooth-menu"><a href="#experience" class="cool-link custom-experience">experience</a></li>
@@ -97,7 +141,15 @@
 		<!-- top-area End -->
 	
 		<!--welcome-hero start -->
-		<section id="welcome-hero" class="welcome-hero">
+            <section id="welcome-hero" >
+                            <div id="customDiv">
+                                <div id="particles-js"></div>
+                                <div id="content">
+                                    <h1>Hyy! I am Rathod Nikhil and I am <b id="changingText">web designer.</b></h1>
+                                </div>
+                            </div>
+            </section>
+		<!-- <section id="welcome-hero" class="welcome-hero">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 text-center">
@@ -107,13 +159,11 @@
 							<ul data-in="fadeInDown" data-out="fadeOutUp">
 							    <li class="smooth-menu"><a href="#contact">Contact Me</a></li>
 							</ul>
-<!-- 							<a href="assets/download/nikhil`s Resume.pdf" download>download resume</a> -->
-							<!-- <a href="#contact" class="custom-contact">Contact Me</a> -->
-						</div><!--/.header-text-->
-					</div><!--/.col-->
-				</div><!-- /.row-->
-			</div><!-- /.container-->
-		</section><!--/.welcome-hero-->
+						</div>
+					</div>
+				</div>
+			</div> -->
+		</section>
 		<!--welcome-hero end -->
 
 		<!--about start -->
@@ -151,7 +201,7 @@
 									<!-- <div class="col-sm-4">
 										<div class="single-about-add-info">
 											<h3>website</h3>
-											<p>www.yiion.com</p>
+											<p>https://www.yiion.com</p>
 										</div>
 									</div> -->
 								</div>
@@ -220,7 +270,7 @@
 										</h4>
 										<h5>Gandhinagar Gujrat, India</h5>
 										<p class="description">
-											The Higher Secondary Certificate (HSC) is a significant academic milestone in a student's educational journey. It marks the completion of secondary education and opens the door to higher studies and career opportunities. 
+											Duis aute irure dolor in reprehenderit in vol patate velit esse cillum dolore eu fugiat nulla pari. Excepteur sint occana inna tecat cupidatat non proident. 
 										</p>
 									</div><!--/.timeline-content-->
 								</div><!--/.timeline-->
@@ -243,7 +293,7 @@
 										</h4>
 										<h5>Patan Gujrat, India</h5>
 										<p class="description">
-											The Bachelor of Computer Applications (BCA) is an undergraduate program that provides a strong foundation in programming, software development, database management, and networking for students interested in computer science and IT. 
+											Duis aute irure dolor in reprehenderit in vol patate velit esse cillum dolore eu fugiat nulla pari. Excepteur sint occana inna tecat cupidatat non proident. 
 										</p>
 									</div><!--/.timeline-content-->
 								</div><!--/.timeline-->
@@ -267,7 +317,7 @@
 										</h4>
 										<h5>Visnagar Gujrat, India</h5>
 										<p class="description">
-											The Master of Computer Applications (MCA) is a postgraduate program that focuses on advanced skills in computer science and application development, preparing students for careers in software engineering, database management, web development, and artificial intelligence. 
+											Duis aute irure dolor in reprehenderit in vol patate velit esse cillum dolore eu fugiat nulla pari. Excepteur sint occana inna tecat cupidatat non proident. 
 										</p>
 									</div><!--/.timeline-content-->
 								</div><!--/.timeline-->
@@ -534,7 +584,7 @@
 			<div class="container">
 				<div class="hm-footer-copyright text-center">
 					<p>
-						&copy; copyright nik. design and developed by <a href="https://nikhilrathod25.github.io/potfolio/"><strong>nik</strong></a>
+						&copy; copyright nik. design and developed by <a href="https://www.yiion.com/">nik</a>
 					</p><!--/p-->
 				</div><!--/.text-center-->
 			</div><!--/.container-->
@@ -587,7 +637,21 @@
 
 		<!--email JS-->
         <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-        
-    </body>
-	
-</html>
+
+        <script>
+            const roles = ["graphic designer.", "UI designer."];
+            let index = 0;
+    
+            function changeText() {
+                let textElement = document.getElementById("changingText");
+                textElement.style.opacity = 0;
+                setTimeout(() => {
+                    textElement.innerHTML = roles[index];
+                    textElement.style.opacity = 1;
+                    index = (index + 1) % roles.length;
+                }, 500);
+            }
+            setInterval(changeText, 3000);
+    
+            particlesJS("particles-js", {
+                particles: {
