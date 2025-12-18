@@ -1,0 +1,263 @@
+/* =================================
+   Offcanvas Menu & Toggler
+==================================== */
+.menu-toggler {
+    position: fixed;
+    top: 40px;
+    right: 32px;
+    width: 95px;
+    height: 95px;
+    border: none;
+    border-radius: 0;
+    display: block;
+    padding: 0;
+    z-index: 9999;
+    cursor: pointer;
+    background: transparent;
+    backdrop-filter: none;
+    transition: var(--transition);
+}
+
+.menu-toggler img {
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.menu-toggler:hover {
+    transform: scale(1.1);
+}
+
+/* Animations for Toggler X state handled by JS adding .active class */
+/* Animations for Toggler */
+.menu-toggler.active {
+    opacity: 0;
+    pointer-events: none;
+    transform: rotate(90deg);
+}
+
+/* Offcanvas Overlay */
+.offcanvas-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 320px;
+    height: 100vh;
+    background: #111;
+    /* Dark background */
+    z-index: 9998;
+    padding: 20px;
+    border-left: 1px solid #222;
+    transform: translateX(100%);
+    transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.offcanvas-menu.open {
+    transform: translateX(0);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Header: "Menu" and "X" */
+.offcanvas-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.offcanvas-header h2 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 0px;
+}
+
+.close-menu {
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    line-height: 1;
+    transition: 0.3s;
+}
+
+.close-menu:hover {
+    color: var(--accent);
+    transform: rotate(90deg);
+}
+
+/* Navigation List */
+.offcanvas-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+    /* Pushes bottom content down */
+}
+
+.offcanvas-nav li {
+    margin-bottom: 22px;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 0.3s ease;
+}
+
+/* Staggered Animation Delay when Opening */
+.offcanvas-menu.open .offcanvas-nav li:nth-child(1) {
+    transition-delay: 0.1s;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.offcanvas-menu.open .offcanvas-nav li:nth-child(2) {
+    transition-delay: 0.15s;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.offcanvas-menu.open .offcanvas-nav li:nth-child(3) {
+    transition-delay: 0.2s;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.offcanvas-menu.open .offcanvas-nav li:nth-child(4) {
+    transition-delay: 0.25s;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.offcanvas-menu.open .offcanvas-nav li:nth-child(5) {
+    transition-delay: 0.3s;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.offcanvas-menu.open .offcanvas-nav li:nth-child(6) {
+    transition-delay: 0.35s;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.offcanvas-menu.open .offcanvas-nav li:nth-child(7) {
+    transition-delay: 0.4s;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.offcanvas-nav a {
+    font-size: 18px;
+    color: #aaa;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.offcanvas-nav a:hover {
+    color: #fff;
+    padding-left: 5px;
+}
+
+.offcanvas-nav img {
+    width: 36px;
+    mix-blend-mode: screen;
+    height: auto;
+}
+
+/* Bottom Section: Social */
+/* Bottom Section: Social */
+.offcanvas-bottom {
+    margin-top: 15px;
+    border-top: 1px solid #222;
+    padding-top: 15px;
+}
+
+.offcanvas-bottom h3 {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.offcanvas-social {
+    display: flex;
+    gap: 20px;
+}
+
+.offcanvas-social a img {
+    width: 36px;
+    height: auto;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: 0.3s;
+    mix-blend-mode: screen;
+}
+
+.offcanvas-social a:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    .menu-toggler {
+        top: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .offcanvas-menu {
+        width: 100%;
+        /* Full width on mobile */
+    }
+}
+
+/* Color Switcher in Menu */
+/* Color Switcher in Menu */
+.offcanvas-colors {
+    width: 100%;
+    padding: 10px 0;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.offcanvas-colors h5 {
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    opacity: 0.7;
+}
+
+.color-list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+}
+
+.color-list li {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: transform 0.2s;
+}
+
+.color-list li:hover {
+    transform: scale(1.2);
+    border-color: #fff;
+}
