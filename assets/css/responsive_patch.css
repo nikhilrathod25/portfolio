@@ -1,0 +1,169 @@
+/*==================================
+    6. Responsive Design
+====================================*/
+
+/* Laptop / Tablet (992px - 1300px) */
+@media (max-width: 1300px) {
+    .drake-page {
+        max-width: 100%;
+        padding: 50px;
+        gap: 40px;
+    }
+
+    .content-area {
+        margin-left: 380px;
+        /* Keep sidebar space */
+    }
+}
+
+/* Tablet Portrait (991px Breakpoint) */
+@media (max-width: 991px) {
+    .drake-page {
+        flex-direction: column;
+        padding: 30px 20px;
+        padding-top: 20px;
+    }
+
+    .sidebar-profile {
+        position: relative;
+        width: 100%;
+        min-width: 100%;
+        top: 0;
+        left: 0;
+        height: auto;
+        margin-bottom: 20px;
+        margin-top: 50px;
+        /* Space for hidden menu toggler if needed */
+    }
+
+    .content-area {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+        /* Keep 3 cols if fits, else auto */
+    }
+
+    .floating-menu {
+        display: none;
+    }
+}
+
+/* Mobile Devices (Max 768px) */
+@media (max-width: 768px) {
+
+    /* Typography */
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+    /* Layout */
+    .drake-page {
+        padding: 15px;
+        padding-top: 10px;
+    }
+
+    .sidebar-profile {
+        padding: 25px;
+        margin-top: 75px;
+    }
+
+    /* Stats Stack */
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .stat-item {
+        margin-bottom: 10px;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Contact Form & Details Stack */
+    .contact-box-custom {
+        flex-direction: column;
+    }
+
+    .contact-details {
+        padding-left: 0;
+        margin-top: 30px;
+        border-top: 1px solid var(--border);
+        padding-top: 30px;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Menu Toggler Positioning */
+    .menu-toggler {
+        top: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .menu-toggler img {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Adjust margins */
+    .mb-5 {
+        margin-bottom: 60px !important;
+    }
+
+    .drake-card {
+        padding: 25px;
+        width: 100%;
+    }
+}
+
+/* Small Mobile (Max 480px) */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .section-subtitle {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar-info .name {
+        font-size: 22px;
+    }
+
+    /* Resume Timeline Mobile */
+    .timeline-item {
+        padding-left: 30px;
+    }
+
+    .timeline-item::before {
+        width: 10px;
+        height: 10px;
+        left: 0;
+    }
+
+    .timeline-item:not(:last-child)::after {
+        left: 4px;
+    }
+}
